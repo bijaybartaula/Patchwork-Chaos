@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bijay: Alchemist of Digital Ingenuity</title>
+  <link rel="icon" href="https://i.ibb.co/5WkzZRrv/keyser-modified.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>  
+
+</head>
+<body>  
+
+    <nav class="navbar">
+        <div class="container">
+          <div class="nav-content">
+            <a href="#home" class="logo">Keyser.</a>
+            <div class="nav-links">
+              <a href="#home" class="nav-link">Home</a>
+              <a href="#about" class="nav-link">About</a>
+              <a href="#projects" class="nav-link">Projects</a>
+              <a href="#skills" class="nav-link">Skills</a>
+              <a href="#experience" class="nav-link">Experience</a>
+              <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/bijaybartaula" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="github"></i>
+              </a>
+              <a href="https://linkedin.com/in/bijaybartaula" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="linkedin"></i>
+              </a>
+              <a href="mailto:contact@bijaybartaula.com">
+                <i data-lucide="mail"></i>
+              </a>
+            </div>
+            <button class="mobile-menu-btn">
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+      
+
+  <section id="home" class="hero">
+    <!-- Background for floating symbols -->
+    <div class="random-symbols"></div>  
+
+    <div class="container">
+      <div class="hero-content">
+        <h1>A Warm Embrace, I'm <span class="gradient-text">Bijay</span></h1>
+        <div class="type-wrap">
+          <span id="typed"></span>
+        </div>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">Unveil My Side Projects</a>
+          <a href="#contact" class="btn btn-outline">At Your Service</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator">
+      <i data-lucide="chevron-down"></i>
+    </a>
+  </section>
+
+  
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">The Trail I <span class="gradient-text">Tread</span></h2>
+      <p class="about-text">
+        I am currently pursuing a Bachelor’s in Computer Engineering at NCIT, with a specialized focus on web development and editing. My academic journey has evolved from solving intricate problems to cultivating a profound expertise in programming and engineering. Through hands-on projects and the art of logic-building, I perceive every challenge as an opportunity to innovate. Driven by an unwavering passion for continuous learning, my aim is to harness my knowledge to empower businesses and help them realize their aspirations. <br><br>
+        My fascination with artificial intelligence and human-computer interaction fuels a deep intellectual curiosity, propelling me to explore profound concepts such as the Turing Test. This pursuit not only seeks to unravel the complexities of systems emulating human cognition, but also to contribute meaningfully to innovations that enrich human experiences and expand the boundaries of what is possible in technology. <br><br>
+        Outside the realm of technology, I draw inspiration from literature, thought-provoking TV shows, and dynamic forms of entertainment, each a catalyst for igniting my creativity and refining my intellect. Through blogging, I offer reflections on the confluence of technology, innovation, and personal growth. As an avid space enthusiast, I am enthralled by the vast mysteries of the cosmos and the limitless potential of space exploration. I also find solace in the world of sports, where strategy and intellect intertwine, and indulge in video gaming, which hones my decision-making and analytical acumen.
+    </p>
+    
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="skill-icon">
+                <i data-lucide="code-2"></i>
+            </div>
+            <h3>Programming</h3>
+            <p>Skilled in various languages, including Python, Java, and JavaScript, with a focus on creating efficient solutions.</p>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">
+                <i data-lucide="brain"></i>
+            </div>
+            <h3>AI/ML</h3>
+            <p>Familiar with machine learning algorithms and AI concepts, building intelligent systems.</p>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">
+                <i data-lucide="database"></i>
+            </div>
+            <h3>Databases</h3>
+            <p>Comfortable with SQL and NoSQL databases, optimizing them for performance.</p>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">
+                <i data-lucide="globe"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Experienced in full-stack development using modern frameworks and tools.</p>
+        </div>
+    </div>   
+    
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Selected <span class="gradient-text">Triumphs</span></h2>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>    
+        <button class="filter-btn" data-filter="ai">AI/ML</button>
+        <button class="filter-btn" data-filter="iot">IoT</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="app">App Development</button>       
+        <button class="filter-btn" data-filter="games">Game Development</button>        
+      </div>
+      <div class="projects-grid">
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">Technical <span class="gradient-text">Competence </span></h2>
+      <div class="skills-container">         
+       
+    </div>
+      <div class="additional-skills">
+        <div class="skill-item">
+          <i data-lucide="terminal"></i>
+          <span>Command Line</span>
+        </div>
+        <div class="skill-item">
+          <i data-lucide="git-branch"></i>
+          <span>Version Control</span>
+        </div>
+        <div class="skill-item">
+          <i data-lucide="server"></i>
+          <span>Server Management</span>
+        </div>
+        <div class="skill-item">
+          <i data-lucide="cpu"></i>
+          <span>System Architecture</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience">
+    <div class="container">
+      <h2 class="section-title">Academic Insight &<span class="gradient-text"> Expertise</span></h2>
+      <div class="timeline">
+          
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>I’m always on the lookout for game-changing ventures and opportunities. Reach out through any of the channels below.</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="method-icon">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="method-details">
+                <h4>Email</h4>
+                <a href="mailto:bijay.221208@ncit.edu.np">contact@bijaybartaula.com</a>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="method-icon">
+                <i data-lucide="phone"></i>
+              </div>
+              <div class="method-details">
+                <h4>Phone</h4>
+                <a href="tel:+9779841011001">+977 9841011001</a>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="method-icon">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div class="method-details">
+                <h4>Location</h4>
+                <p>Bhaktapur, Nepal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required rows="6" placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i data-lucide="send"></i> Send Message
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="container">
+      <div class="quote-container">
+        <i data-lucide="quote" class="quote-icon top-left"></i>
+        <blockquote id="random-quote"></blockquote>
+        <p id="quote-author" class="quote-author"></p>
+        <i data-lucide="quote" class="quote-icon bottom-right"></i>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <div class="footer-social">
+            <a href="https://github.com/bijaybartaula" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="https://linkedin.com/in/bijaybartaula" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="mailto:bijay.221208@ncit.edu.np">
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Bijay Bartaula. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/experience.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/quotes.js"></script>
+</body>
+</html>
+
