@@ -1,0 +1,168 @@
+/* Loading Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Animated Background */
+  .animated-background {
+    position: absolute;
+    inset: 0;
+    opacity: 0.2;
+    overflow: hidden;
+  }
+  
+  .animated-background::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 80%);
+    animation: rotate 30s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Scroll Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Skill Bar Animation */
+  @keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--progress); }
+  }
+  
+  /* Project Card Hover Effects */
+  .project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Button Hover Animation */
+  .btn {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+  
+  .btn:hover::after {
+    width: 300%;
+    height: 300%;
+  }
+  
+  /* Timeline Animation */
+  .timeline-item {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .timeline-item:nth-child(even) {
+    transform: translateX(50px);
+  }
+  
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Quote Section Animation */
+  .quote-container {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .quote-container.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Form Input Focus Animation */
+  .form-group input:focus,
+  .form-group textarea:focus {
+    transform: translateY(-2px);
+  }
+  
+  /* Social Icons Hover Animation */
+  .social-links a,
+  .footer-social a {
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links a:hover,
+  .footer-social a:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Mobile Menu Animation */
+  .mobile-menu {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Navbar Scroll Animation */
+  .navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Loading Spinner Animation */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .loading-spinner {
+    animation: spin 1s linear infinite;
+  }
