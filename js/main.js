@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         symbolDiv.style.top = top;
         symbolDiv.style.animationDelay = animationDelay;
         symbolDiv.style.fontSize = fontSize;
-        symbolDiv.style.opacity = '0.4';
+        symbolDiv.style.opacity = '0.67';
         symbolDiv.style.color = 'lightgrey';
   
         // Assign the random symbol text
