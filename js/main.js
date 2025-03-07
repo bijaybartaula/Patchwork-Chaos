@@ -84,9 +84,11 @@ document.querySelectorAll('.fade-in').forEach(element => {
 // Initialize typed.js
 const typed = new Typed('#typed', {
   strings: [
+    'Quantum Computing Enthusiast',
+    'AI/ML Enthusiast',
+    'Blockchain Architect',
     'Computer Science Engineer',
     'Full Stack Developer',
-    'AI/ML Enthusiast',
     'Tech Innovator',
     'Creative Problem Solver'
   ],
@@ -95,7 +97,6 @@ const typed = new Typed('#typed', {
   backDelay: 1000,
   loop: true
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
     // List of symbols and text elements
