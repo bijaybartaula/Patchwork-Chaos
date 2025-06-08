@@ -85,7 +85,8 @@ patchwork-chaos/
 
 ### **Architecture Diagram**
 
-(https://github.com/bijaybartaula/Patchwork-Chaos/blob/main/asset/architecture.png)
+(/asset/architecture.png)
+
 
 ### **Component Specifications**
 
