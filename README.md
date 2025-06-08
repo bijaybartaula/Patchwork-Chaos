@@ -83,83 +83,9 @@ patchwork-chaos/
 └───────────────┴───────────────┴──────────────────────┘
 ```
 
-### **Architectural Diagram**
+### **Architecture Diagram**
 
-```
-flowchart TD
-    index["index.html"]:::ui
-
-    subgraph "Presentation Layer"
-        subgraph "CSS Modules"
-            maincss["main.css"]:::ui
-            animcss["animations.css"]:::ui
-        end
-        subgraph "JS Modules"
-            mainjs["main.js"]:::logic
-            proj["projects.js"]:::logic
-            skill["skills.js"]:::logic
-            exp["experience.js"]:::logic
-            quote["quotes.js"]:::logic
-            contact["contact.js"]:::logic
-            typed["Typed.js"]:::logic
-            icons["Lucide Icons"]:::logic
-        end
-    end
-
-    subgraph "Application Layer"
-        dom["DOM & Event Handlers"]:::logic
-        data["Data Models"]:::logic
-    end
-
-    subgraph "External Services"
-        emailjs["EmailJS API"]:::external
-    end
-
-    subgraph "Assets"
-        assetDir["asset/"]:::assets
-        cv["Bijay_CV.pdf"]:::assets
-    end
-
-    index -->|"loads CSS"| maincss
-    index -->|"loads CSS"| animcss
-    index -->|"loads JS"| mainjs
-    index -->|"loads JS"| proj
-    index -->|"loads JS"| skill
-    index -->|"loads JS"| exp
-    index -->|"loads JS"| quote
-    index -->|"loads JS"| contact
-
-    mainjs -->|"init & invoke"| typed
-    mainjs -->|"init & invoke"| icons
-
-    proj -->|"render/filter"| dom
-    skill -->|"observe & animate"| dom
-    exp -->|"lazy-load timeline"| dom
-    quote -->|"rotate quotes"| dom
-    contact -->|"handle form"| dom
-    dom -->|"uses models"| data
-    contact -->|"calls API"| emailjs
-
-    index --> assetDir
-    assetDir --> cv
-
-    click index "https://github.com/bijaybartaula/patchwork-chaos/blob/main/index.html"
-    click maincss "https://github.com/bijaybartaula/patchwork-chaos/blob/main/styles/main.css"
-    click animcss "https://github.com/bijaybartaula/patchwork-chaos/blob/main/styles/animations.css"
-    click mainjs "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/main.js"
-    click proj "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/projects.js"
-    click skill "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/skills.js"
-    click exp "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/experience.js"
-    click quote "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/quotes.js"
-    click contact "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/contact.js"
-    click assetDir "https://github.com/bijaybartaula/patchwork-chaos/tree/main/asset/"
-    click cv "https://github.com/bijaybartaula/patchwork-chaos/blob/main/asset/Bijay_CV.pdf"
-
-    classDef ui fill:#cce5ff,stroke:#006BB3,color:#000
-    classDef logic fill:#d4edda,stroke:#28A745,color:#000
-    classDef external fill:#fff3cd,stroke:#FFC107,color:#000
-    classDef assets fill:#e2e3e5,stroke:#6C757D,color:#000
-```
+(https://github.com/bijaybartaula/Patchwork-Chaos/blob/main/asset/architecture.png)
 
 ### **Component Specifications**
 
@@ -375,6 +301,7 @@ This project is licensed under the **GNU Affero General Public License v3.0** - 
 - Email: bijay.221208@ncit.edu.np
 - LinkedIn: [Connect With Me](https://linkedin.com/in/bijaybartaula)
 - GitHub: [@bijaybartaula](https://github.com/bijaybartaula)
+- Twitter: [@bijaybartaula](https://x.com/bijaybartaula)
 
 ---
 
