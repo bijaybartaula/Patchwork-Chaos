@@ -128,14 +128,14 @@
 .navbar.scrolled {
   background-color: rgba(255, 255, 255, 1);
   /* Remove the transform property that causes the movement */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: make shadow slightly smaller when scrolled */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
+  height: 3.5rem;
   max-width: 1200px;
   margin: 0 auto;
   transition: opacity 0.4s ease;
@@ -163,7 +163,7 @@
 
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 2.0rem;
 }
 
 .nav-link {
@@ -244,7 +244,6 @@
     display: flex;
   }
 }
-
   /* Adjusting button size for smaller screens */
   .btn {
     padding: 0.5rem 1rem; 
@@ -271,7 +270,6 @@
   .btn-download i {
     font-size: 16px; 
   }
-}
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
