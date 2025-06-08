@@ -37,21 +37,25 @@
 
 ### **Project Structure**
 ```
-Patchwork-Chaos/
-├── index.html              # Main HTML structure
+patchwork-chaos/
+├── README.md               # Project overview and instructions
 ├── CNAME                   # Custom domain configuration
+├── index.html              # HTML structure (277 LOC)
 ├── LICENSE                 # GNU AGPL v3.0
+├── asset/                  # Media files
+│   ├── artifacts/          # Generated artifacts (e.g., screenshots, reports)
+│   └── diagram/
+│       └── architecture-diagram.mermaid  # Architecture diagram in Mermaid format
 ├── styles/
 │   ├── main.css              # Core styles (19.5KB)
 │   └── animations.css        # Keyframe animations (3.33KB)
 ├── js/
-│   ├── main.js              # Core functionality (171 LOC)
-│   ├── projects.js          # Project filtering (253 LOC)
-│   ├── skills.js            # Skill visualization (100 LOC)
-│   ├── experience.js        # Timeline rendering (112 LOC)
-│   ├── contact.js           # Form handling (98 LOC)
-│   └── quotes.js            # Quote generator (1476 LOC)
-└── assets/               # Media files
+   ├── main.js              # Core functionality (171 LOC)
+   ├── projects.js          # Project filtering (253 LOC)
+   ├── skills.js            # Skill visualization (100 LOC)
+   ├── experience.js        # Timeline rendering (112 LOC)
+   ├── contact.js           # Form handling (98 LOC)
+   └── quotes.js            # Quote generator (1476 LOC)
 ```
 
 ### **Technology Stack**
@@ -63,21 +67,98 @@ Patchwork-Chaos/
 | **Typography** | Typed.js | Dynamic text animations |
 | **Forms** | EmailJS | Contact form integration |
 
+### **Architectural Structure**
+```
+┌──────────────────────────────────────────────────────┐
+│                  Presentation Layer                   │
+├───────────────┬───────────────┬──────────────────────┤
+│  HTML5 Markup │   CSS3 Styles │    JavaScript         │
+└───────┬───────┴───────┬───────┴──────────┬───────────┘
+        │               │                  │
+        ▼               ▼                  ▼
+┌──────────────────────────────────────────────────────┐
+│                   Application Layer                   │
+├───────────────┬───────────────┬──────────────────────┤
+│  DOM Manip.   │ Event Handlers│  API Integrations     │
+└───────────────┴───────────────┴──────────────────────┘
+```
 
 ### **Architectural Diagram**
+
 ```
-┌───────────────────────────────────────────────────┐
-│                 Presentation Layer                 │
-├─────────────────┬─────────────────┬───────────────┤
-│   HTML5 Markup   │   CSS3 Styles   │  JavaScript   │
-└────────┬────────┴────────┬────────┴───────┬───────┘
-         │                  │                │
-         ▼                  ▼                ▼
-┌───────────────────────────────────────────────────┐
-│                  Application Layer                 │
-├──────────────┬───────────────┬────────────────────┤
-│  DOM Manip   │  Event Handlers│  API Integrations  │
-└──────────────┴───────────────┴────────────────────┘
+flowchart TD
+    index["index.html"]:::ui
+
+    subgraph "Presentation Layer"
+        subgraph "CSS Modules"
+            maincss["main.css"]:::ui
+            animcss["animations.css"]:::ui
+        end
+        subgraph "JS Modules"
+            mainjs["main.js"]:::logic
+            proj["projects.js"]:::logic
+            skill["skills.js"]:::logic
+            exp["experience.js"]:::logic
+            quote["quotes.js"]:::logic
+            contact["contact.js"]:::logic
+            typed["Typed.js"]:::logic
+            icons["Lucide Icons"]:::logic
+        end
+    end
+
+    subgraph "Application Layer"
+        dom["DOM & Event Handlers"]:::logic
+        data["Data Models"]:::logic
+    end
+
+    subgraph "External Services"
+        emailjs["EmailJS API"]:::external
+    end
+
+    subgraph "Assets"
+        assetDir["asset/"]:::assets
+        cv["Bijay_CV.pdf"]:::assets
+    end
+
+    index -->|"loads CSS"| maincss
+    index -->|"loads CSS"| animcss
+    index -->|"loads JS"| mainjs
+    index -->|"loads JS"| proj
+    index -->|"loads JS"| skill
+    index -->|"loads JS"| exp
+    index -->|"loads JS"| quote
+    index -->|"loads JS"| contact
+
+    mainjs -->|"init & invoke"| typed
+    mainjs -->|"init & invoke"| icons
+
+    proj -->|"render/filter"| dom
+    skill -->|"observe & animate"| dom
+    exp -->|"lazy-load timeline"| dom
+    quote -->|"rotate quotes"| dom
+    contact -->|"handle form"| dom
+    dom -->|"uses models"| data
+    contact -->|"calls API"| emailjs
+
+    index --> assetDir
+    assetDir --> cv
+
+    click index "https://github.com/bijaybartaula/patchwork-chaos/blob/main/index.html"
+    click maincss "https://github.com/bijaybartaula/patchwork-chaos/blob/main/styles/main.css"
+    click animcss "https://github.com/bijaybartaula/patchwork-chaos/blob/main/styles/animations.css"
+    click mainjs "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/main.js"
+    click proj "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/projects.js"
+    click skill "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/skills.js"
+    click exp "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/experience.js"
+    click quote "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/quotes.js"
+    click contact "https://github.com/bijaybartaula/patchwork-chaos/blob/main/js/contact.js"
+    click assetDir "https://github.com/bijaybartaula/patchwork-chaos/tree/main/asset/"
+    click cv "https://github.com/bijaybartaula/patchwork-chaos/blob/main/asset/Bijay_CV.pdf"
+
+    classDef ui fill:#cce5ff,stroke:#006BB3,color:#000
+    classDef logic fill:#d4edda,stroke:#28A745,color:#000
+    classDef external fill:#fff3cd,stroke:#FFC107,color:#000
+    classDef assets fill:#e2e3e5,stroke:#6C757D,color:#000
 ```
 
 ### **Component Specifications**
@@ -112,19 +193,19 @@ Patchwork-Chaos/
 ### **Lighthouse Scores**
 | Metric | Desktop | Mobile | Target |
 |--------|---------|---------|--------|
-| **Performance** | 64/100 | 60/100 | 90+ |
-| **Accessibility** | 84/100 | 75/100 | 95+ |
-| **Best Practices** | 78/100 | 79/100 | 90+ |
-| **SEO** | 91/100 | 83/100 | 95+ |
-| **Overall** | **79/100** | **74/100** | **90+** |
+| **Performance** | 99/100 | 93/100 | 100 |
+| **Accessibility** | 84/100 | 75/100 | 100 |
+| **Best Practices** | 100/100 | 100/100 |100 |
+| **SEO** | 91/100 | 91/100 | 100 |
+| **Overall** | **93.5/100** | **89.75/100** | **100** |
 
 ### **Core Web Vitals**
 | Metric | Desktop | Mobile | Benchmark |
 |--------|---------|---------|-----------|
-| **FCP** | 1.2s | 2.9s | <1.8s |
-| **LCP** | 1.2s | 2.9s | <2.5s |
-| **TBT** | 800ms | 3,040ms | <300ms |
-| **CLS** | 0.002 | 0.002 | <0.1 |
+| **FCP** | 0.7s | 2.7s | <1.8s |
+| **LCP** | 0.7s | 2.7s | <2.5s |
+| **TBT** | 0ms | 0ms | <300ms |
+| **CLS** | 0.001 | 0.002 | <0.1 |
 
 ---
 
