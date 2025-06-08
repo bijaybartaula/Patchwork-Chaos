@@ -2,8 +2,8 @@
 
 [![Website](https://img.shields.io/website?url=https%3A//bijaybartaula.com.np)](https://bijaybartaula.com.np)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Lighthouse Score](https://img.shields.io/badge/Lighthouse-79%2F100-orange)](https://bijaybartaula.com.np)
-[![Performance](https://img.shields.io/badge/Performance-64%2F100-yellow)](#performance-metrics)
+[![Lighthouse Score](https://img.shields.io/badge/Lighthouse-91.625%2F100-orange)](https://bijaybartaula.com.np)
+[![Performance](https://img.shields.io/badge/Performance-96%2F100-yellow)](#performance-metrics)
 
 > A modern, responsive portfolio website showcasing computer engineering expertise and web development projects. Built with vanilla JavaScript for optimal performance and maintainability.
 
@@ -83,11 +83,6 @@ patchwork-chaos/
 └───────────────┴───────────────┴──────────────────────┘
 ```
 
-### **Architecture Diagram**
-
-![Architecture Diagram](/asset/architecture.png)
-
-
 ### **Component Specifications**
 
 #### Core Modules
@@ -134,7 +129,7 @@ patchwork-chaos/
 | **TBT** | 0ms | 0ms | <300ms |
 | **CLS** | 0.001 | 0.002 | <0.1 |
 
----
+--- 
 
 ## Quick Start
 
