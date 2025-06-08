@@ -85,7 +85,7 @@ patchwork-chaos/
 
 ### **Architecture Diagram**
 
-(/asset/architecture.png)
+![Architecture Diagram](/asset/architecture.png)
 
 
 ### **Component Specifications**
