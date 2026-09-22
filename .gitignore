@@ -1,0 +1,30 @@
+node_modules
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+*.secret
+.DS_Store
+Thumbs.db
+
+# Build/output artifacts
+dist
+build
+out
+.next
+.cache
+*.log
+
+# Generated artifacts/images (large binary drafts, reports)
+asset/artifacts
+
+# OS/editor misc
+.idea
+.vscode
+*.sublime-workspace
+*.sublime-project
